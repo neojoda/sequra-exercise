@@ -1,2 +1,3 @@
-FROM php:8.1.7-fpm
-RUN apt-get update
+FROM php:8.1.7-cli
+RUN apt update
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
