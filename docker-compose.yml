@@ -31,6 +31,9 @@ services:
 
   #MySQL Service
   db:
+    build:
+      context: .
+      dockerfile: df/db/Dockerfile
     image: mysql:5.7
     container_name: db
     restart: unless-stopped
